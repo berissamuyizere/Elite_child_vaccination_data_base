@@ -9,6 +9,22 @@ CREATE TABLE child_vaccination.medical(
     height NUMERIC(5,2)NOT NULL CHECK (weight>0));
 
 SELECT * FROM child_vaccination.medical ;
+
+CREATE TABLE child_vaccination.child_detail(
+    child_id SERIAL primary Key,
+    childName VARCHAR(100) NOT null,
+    date_of_birth DATE not null,
+    gender VARCHAR(10)not null,
+
+    CONSTRAINT fk_child
+   FOREIGN KEY(child_id)
+      REFERENCES Child_vaccination.child_detail(child_id)
+      ON DELETE CASCADE
+
+)
+--  drop table Child_vaccination.child_detail;
+
+SELECT * from Child_vaccination.child_detail;
 INSERT INTO child_vaccination.medical(child_id,condition,status,weight,height) VALUES
 (01,'underweight','Not bad',15.03,78.04),
 (02,'obese','bad',20.04,90.03),

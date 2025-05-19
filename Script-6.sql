@@ -61,6 +61,16 @@ INSERT INTO child_vaccination.vaccinated (child_id,vc_id,vaccination_date, dose)
 (13,13,'01-02-2025', '2'),
 (14,14,'01-02-2025', '1'),
 (15,15,'01-02-2025', '2');
+
 SELECT COUNT (DISTINCT child_id) as number_of_children from child_vaccination.vaccinated
 where EXTRACT(year from vaccination_date) = (select MAX(extract(year from vaccination_date)) from child_vaccination.vaccinated);
+
+-- SELECT current_tatabase();
+-- SELECT current_schema();
+
+SELECT EXTRACT(YEAR FROM vaccination_date) AS YEAR, COUNT(DISTINCT child_id) AS number_of_children
+FROM child_vaccination.vaccinated
+GROUP BY YEAR
+ORDER BY YEAR
+
 

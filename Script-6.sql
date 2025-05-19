@@ -4,33 +4,32 @@ select *from child_vaccination.childdetail;
 
 select *from child_vaccination.vaccination;
 
+-- CREATE TABLE child_vaccination.vaccination(
+-- vc_id SERIAL primary key,
+-- child_id INT not null,
+-- type_of_vaccination VARCHAR(15) not null,
+-- date_of_vaccination DATE not null,
+-- expiry_date DATE not null,
+-- donor VARCHAR(20) not null
+-- );
 
-CREATE TABLE child_vaccination.vaccination(
-vc_id SERIAL primary key,
-child_id INT not null,
-type_of_vaccination VARCHAR(15) not null,
-date_of_vaccination DATE not null,
-expiry_date DATE not null,
-donor VARCHAR(20) not null
-);
-
-INSERT INTO child_vaccination.vaccination(child_id, type_of_vaccination, date_of_vaccination, expiry_date, donor) VALUES
-(1, 'Measles', '01-02-2025', '01-03-2025', 'Kalisa'),
-(2, 'Polio', '01-03-2025', '01-04-2025', 'Mulisa'),
-(3,'Measles', '01-05-2025', '01-06-2025', 'Becky'),
-(4,'Measles', '01-05-2025', '01-06-2025', 'Bella'),
-(5, 'Polio', '01-06-2025', '01-02-2025', 'Mwilisa'),
-(6,'Measles', '01-05-2025', '01-06-2025', 'Becky'),
-(7,'Measles', '01-05-2025', '01-06-2025', 'Benjamin'),
-(8,'Measles', '01-05-2025', '01-06-2025', 'Becky'),
-(9,'Polio', '01-05-2025', '01-06-2025', 'Ben'),
-(10,'Measles', '01-05-2025', '01-06-2025', 'Betty'),
-(11,'Polio', '01-05-2025', '01-06-2025', 'Bebe'),
-(12,'Measles', '01-05-2025', '01-06-2025', 'Nelly'),
-(13,'Polio', '01-05-2025', '01-06-2025', 'Bonnie'),
-(14,'POlio', '01-05-2025', '01-06-2025', 'Becky'),
-(15,'Measles', '01-05-2025', '01-06-2025', 'Lucky');
-SELECT * FROM child_vaccination.vaccination;
+-- INSERT INTO child_vaccination.vaccination(child_id, type_of_vaccination, date_of_vaccination, expiry_date, donor) VALUES
+-- (1, 'Measles', '01-02-2025', '01-03-2025', 'Kalisa'),
+-- (2, 'Polio', '01-03-2025', '01-04-2025', 'Mulisa'),
+-- (3,'Measles', '01-05-2025', '01-06-2025', 'Becky'),
+-- (4,'Measles', '01-05-2025', '01-06-2025', 'Bella'),
+-- (5, 'Polio', '01-06-2025', '01-02-2025', 'Mwilisa'),
+-- (6,'Measles', '01-05-2025', '01-06-2025', 'Becky'),
+-- (7,'Measles', '01-05-2025', '01-06-2025', 'Benjamin'),
+-- (8,'Measles', '01-05-2025', '01-06-2025', 'Becky'),
+-- (9,'Polio', '01-05-2025', '01-06-2025', 'Ben'),
+-- (10,'Measles', '01-05-2025', '01-06-2025', 'Betty'),
+-- (11,'Polio', '01-05-2025', '01-06-2025', 'Bebe'),
+-- (12,'Measles', '01-05-2025', '01-06-2025', 'Nelly'),
+-- (13,'Polio', '01-05-2025', '01-06-2025', 'Bonnie'),
+-- (14,'POlio', '01-05-2025', '01-06-2025', 'Becky'),
+-- (15,'Measles', '01-05-2025', '01-06-2025', 'Lucky');
+-- SELECT * FROM child_vaccination.vaccination;
 -- DROP TABLE child_vaccination.vaccination;
 
 

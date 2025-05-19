@@ -25,9 +25,10 @@ VALUES ('Kisu','02-04-2024','Female'),
        ('Dorothy','02-02-2022','male')
 
 SELECT * FROM child_vaccination.childdetail;
-SELECT COUNT(*) 
-FROM child_vaccination.childdetail
-WHERE date_of_birth > '20-05-2025';
+SELECT COUNT(*) AS childre_under_age
+FROM childdetail
+WHERE date_of_birth > date-sub (CURDATE(), INTERVAL 4 YEAR)
+
 
 SELECT COUNT (*) 
 FROM Child_vaccination.childdetail 
